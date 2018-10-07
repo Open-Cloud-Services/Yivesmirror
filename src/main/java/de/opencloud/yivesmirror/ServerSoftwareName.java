@@ -16,6 +16,13 @@ public class ServerSoftwareName {
         this.name = name;
     }
 
+    /**
+     * Gets all versions for the server software name
+     *
+     * @return list of versions
+     * @throws IOException
+     * @throws InterruptedException
+     */
     public List<ServerSoftwareVersion> getVersions() throws IOException, InterruptedException {
         var request = HttpRequest.newBuilder()
                 .GET()
@@ -28,6 +35,11 @@ public class ServerSoftwareName {
                 .collect(Collectors.toList());
     }
 
+    /**
+     * Helper method to construct ServerSoftwareVersion with ease
+     * @param version
+     * @return the ServerSoftwareVersion
+     */
     private ServerSoftwareVersion toVersion(String version) {
         return new ServerSoftwareVersion(this.name, version);
     }

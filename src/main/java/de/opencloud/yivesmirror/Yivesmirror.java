@@ -26,6 +26,13 @@ public class Yivesmirror {
                 .create();
     }
 
+    /**
+     * Gets all names of serverSoftwares, for example spigot
+     *
+     * @return a List of ServerSoftwareNames
+     * @throws IOException
+     * @throws InterruptedException
+     */
     public List<ServerSoftwareName> getServerSoftwareNames() throws IOException, InterruptedException {
         var request = HttpRequest.newBuilder()
                 .GET()
@@ -37,6 +44,15 @@ public class Yivesmirror {
         .collect(Collectors.toList());
     }
 
+    /**
+     * Gets a specific Server software because there is no constructor
+     *
+     * @param name of the server software
+     * @param version of the server software
+     * @return the ServerSoftware, if there is one
+     * @throws IOException
+     * @throws InterruptedException
+     */
     public ServerSoftware getServerSoftwareFromNameAndVersion(String name, String version) throws IOException, InterruptedException {
         ServerSoftwareVersion serverSoftwareVersion = new ServerSoftwareVersion(name, version);
 
