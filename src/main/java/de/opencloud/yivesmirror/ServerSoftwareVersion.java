@@ -15,6 +15,13 @@ public class ServerSoftwareVersion {
         this.version = version;
     }
 
+    /**
+     * Gets the Server software for version and name
+     *
+     * @return the serversoftware
+     * @throws IOException
+     * @throws InterruptedException
+     */
     public ServerSoftware getServerSoftware() throws IOException, InterruptedException {
         HttpRequest request = HttpRequest.newBuilder()
                 .GET()
