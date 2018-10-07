@@ -1,4 +1,4 @@
-package de.opencloud.yivesmirror;
+package app.open.software.yivesmirror;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

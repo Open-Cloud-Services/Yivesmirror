@@ -1,4 +1,4 @@
-package de.opencloud.yivesmirror;
+package app.open.software.yivesmirror;
 
 import java.io.IOException;
 import java.net.URI;
